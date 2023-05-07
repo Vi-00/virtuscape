@@ -15,6 +15,7 @@ import Login from "./routes/login";
 import Home from "./routes/home";
 import TicTacToe from "./routes/games/tick-tac-toe";
 import Guessing from "./routes/games/guessing";
+import RockPaperScissor from "./routes/games/rock-paper-scissor";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
             {
                 path: "/games/guessing",
                 element: <Guessing/>
+            },
+            {
+                path: "/games/rock-paper-scissor",
+                element: <RockPaperScissor />
             }
         ]
     }

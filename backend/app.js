@@ -8,6 +8,7 @@ const cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var guessRouter = require('./routes/guess');
+var rockPaperScissorRouter = require('./routes/rock-paper-scissor')
 
 var app = express();
 
@@ -21,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/guess', guessRouter);
+app.use('/rock-paper-scissor', rockPaperScissorRouter);
 const port = 4000;
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
