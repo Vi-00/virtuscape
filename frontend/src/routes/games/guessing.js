@@ -24,29 +24,44 @@ export default function Guessing() {
         }
     }, []);
     const guess = () => {
+        if (remainingMoves === 0) {
+            return;
+        }
         const g = guessInput;
-        setRemainingMoves(remainingMoves - 1);
         if (g === target) {
             setMessage("You Won!");
-        } else if (remainingMoves === 0) {
+            return;
+        }
+        if (remainingMoves === 1) {
             setMessage(`You Lost. The number was ${target}`);
         } else {
             console.log({target, g});
-            if (g < target) {
-                setMessage("Too Low!");
+            const difference = Math.abs(g - target);
+            if (difference <= 10) {
+                if (g < target) {
+                    setMessage(`Quite close but the your guess is on lower side`);
+                } else {
+                    setMessage(`Quite close but the your guess is on upper side`);
+                }
             } else {
-                setMessage("Too High!");
+                if (g < target) {
+                    setMessage(`Oops the guess was quite lower`);
+                } else {
+                    setMessage(`Oops the guess was quite greater`);
+                }
             }
         }
+        setRemainingMoves(remainingMoves - 1);
     }
 
     return (
         <>
             <p>Remaining Moves: {remainingMoves}</p>
-            <input type={"number"} name="guess" id="user-guess" onChange={(e) => {
-                setGuessInput(Number(e.target.value));
-            }}/>
-            <button onClick={() => guess()}>Guess!</button>
+            <input type={"number"} name="guess" id="user-guess" disabled={remainingMoves <= 0}
+                   onChange={(e) => {
+                       setGuessInput(Number(e.target.value));
+                   }}/>
+            <button onClick={() => guess()} disabled={remainingMoves <= 0}>Guess!</button>
             <h2>{message}</h2>
         </>
     )
