@@ -4,9 +4,11 @@ import './homepage.css';
 export function HomePage() {
   return (
     <>
-        <div id = "comment">
-            <h1>VIRTUSCAPE</h1>
-            <h2>When modern meets classic</h2>
+        <div class = "container" id = "home">
+            <div id = "comment">
+                <h1>VIRTUSCAPE</h1>
+                <h2>When modern meets classic</h2>
+            </div>
         </div>
     </>
   );

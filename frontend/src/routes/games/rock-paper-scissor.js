@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import "./rock-paper-scissor.css";
 
 const ImageButton = (props) => (
     <button value={props.value} onClick={props.onClick}>
@@ -73,41 +74,45 @@ export default function RockPaperScissor() {
     }, [userChoice, gameRound]);
     return (
         <>
-            <ul id={'rps-choices'}>
-                {buttonData.map(c => {
-                    const props = {
-                        onClick: () => {
-                            setUserChoice(c.value);
-                            setAiChoice('');
-                            setGameRound(gameRound + 1);
-                            setFetching(true);
-                        }, ...c
-                    };
-                    return <li key={c.key}>
-                        {ImageButton(props)}
-                    </li>
-                })}
-            </ul>
-            <p>You Chose:</p>
-            {userChoice
-                ? (<ImageButton onClick={() => {
-                    console.log(userChoice, choiceId[userChoice]);
-                    console.log(aiChoice, choiceId[aiChoice]);
-                }}
-                                value={buttonData[choiceId[userChoice]].value}
-                                image={buttonData[choiceId[userChoice]].image}/>)
-                : (<></>)
-            }
-            <p>AI Chose: </p>
-            {aiChoice
-                ? (<ImageButton onClick={() => {
-                    console.log(aiChoice, choiceId[aiChoice])
-                }}
-                                value={buttonData[choiceId[aiChoice]].value}
-                                image={buttonData[choiceId[aiChoice]].image}/>)
-                : (fetching ? (<div className={'spinner'}></div>) : (<></>))
-            }
-            <h2>{message}</h2>
+            <div id = "rpscontainer" class = "container">
+                <ul id={'rps-choices'}>
+                    {buttonData.map(c => {
+                        const props = {
+                            onClick: () => {
+                                setUserChoice(c.value);
+                                setAiChoice('');
+                                setGameRound(gameRound + 1);
+                                setFetching(true);
+                            }, ...c
+                        };
+                        return <li key={c.key}>
+                            {ImageButton(props)}
+                        </li>
+                    })}
+                </ul>
+                <p>You Chose:</p>
+                {userChoice
+                    ? (<ImageButton onClick={() => {
+                        console.log(userChoice, choiceId[userChoice]);
+                        console.log(aiChoice, choiceId[aiChoice]);
+                    }}
+                                    value={buttonData[choiceId[userChoice]].value}
+                                    image={buttonData[choiceId[userChoice]].image}/>)
+                    : (<></>)
+                }
+                <p>AI Chose: </p>
+                <div id ="ai">
+                    {aiChoice
+                        ? (<ImageButton onClick={() => {
+                            console.log(aiChoice, choiceId[aiChoice])
+                        }}
+                                        value={buttonData[choiceId[aiChoice]].value}
+                                        image={buttonData[choiceId[aiChoice]].image}/>)
+                        : (fetching ? (<div className={'spinner'}></div>) : (<></>))
+                    }
+                </div>
+                <h2>{message}</h2>
+            </div>
         </>
     )
 }

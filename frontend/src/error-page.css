@@ -2,10 +2,6 @@ body {
   overflow: hidden;
 }
 
-#error-page {
-  height: 100vh;
-}
-
 #message {
   width: fit-content;
   padding: 10px;

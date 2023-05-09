@@ -58,7 +58,7 @@ function Board({ xIsNext, squares, onPlay }) {
 export default function Game() {
     //styles the overflow for this page only
     document.body.style.overflow = "hidden";
-    
+
     const [history, setHistory] = useState([Array(9).fill(null)]);
     const [currentMove, setCurrentMove] = useState(0);
     const xIsNext = currentMove % 2 === 0;
@@ -89,7 +89,7 @@ export default function Game() {
     });
 
     return (
-        <div className="game">
+        <div id="game" class = "container">
             <div className="game-board">
                 <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
             </div>
