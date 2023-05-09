@@ -116,8 +116,8 @@ export default function RockPaperScissor() {
     }
     return (
         <>
-<<<<<<< HEAD
-            <div id = "rpscontainer" class = "container">
+            <div class = "container" id = "rpscontainer">
+                <h1>Rock Paper Scissors</h1>
                 <ul id={'rps-choices'}>
                     {buttonData.map(c => {
                         const props = {
@@ -134,50 +134,13 @@ export default function RockPaperScissor() {
                     })}
                 </ul>
                 <p>You Chose:</p>
-                {userChoice
-                    ? (<ImageButton onClick={() => {
-                        console.log(userChoice, choiceId[userChoice]);
-                        console.log(aiChoice, choiceId[aiChoice]);
-                    }}
-                                    value={buttonData[choiceId[userChoice]].value}
-                                    image={buttonData[choiceId[userChoice]].image}/>)
-                    : (<></>)
-                }
+                {renderUserChoice()}
                 <p>AI Chose: </p>
-                <div id ="ai">
-                    {aiChoice
-                        ? (<ImageButton onClick={() => {
-                            console.log(aiChoice, choiceId[aiChoice])
-                        }}
-                                        value={buttonData[choiceId[aiChoice]].value}
-                                        image={buttonData[choiceId[aiChoice]].image}/>)
-                        : (fetching ? (<div className={'spinner'}></div>) : (<></>))
-                    }
-                </div>
+                    <div id = "ai">
+                        {renderAiChoice()}
+                    </div>
                 <h2>{message}</h2>
             </div>
-=======
-            <ul id={'rps-choices'}>
-                {buttonData.map(c => {
-                    const props = {
-                        onClick: () => {
-                            setUserChoice(c.value);
-                            setAiChoice('');
-                            setGameRound(gameRound + 1);
-                            setFetching(true);
-                        }, ...c
-                    };
-                    return <li key={c.key}>
-                        {ImageButton(props)}
-                    </li>
-                })}
-            </ul>
-            <p>You Chose:</p>
-            {renderUserChoice()}
-            <p>AI Chose: </p>
-            {renderAiChoice()}
-            <h2>{message}</h2>
->>>>>>> 749d10edaee5df012e27f0b845a742619f685b3c
         </>
     )
 }

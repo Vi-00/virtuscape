@@ -19,7 +19,7 @@ export default function Guessing() {
         let ignore = false;
 
         async function startFetching() {
-            const response = await fetch('http://localhost:4000/guess');
+            const response = await fetch('http://localhost:3000/guess');
             try {
                 const data = await response.json();
                 console.log({data});
