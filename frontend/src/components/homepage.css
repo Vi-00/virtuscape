@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+#comment {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(146,107,84);
+}
+
+#comment h1 {
+  font-family: 'Courier New', monospace;
+  font-size: 90px;
+  margin-bottom: 0px;
+}
+
+#comment h2 {
+  font-family: 'Allura', cursive;
+  font-size: 50px;
+}

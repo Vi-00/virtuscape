@@ -4,7 +4,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Welcome to Virtuescape!
+        <h1>Welcome to Virtuescape!</h1>
+        <h2>When Modern meets classic!</h2>
       </header>
     </div>
   );

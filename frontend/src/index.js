@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 import ErrorPage from "./error-page";
-import Root from "./routes/root";
+import Navbar from "./components/navbar";
 
 import {
     createBrowserRouter,
@@ -22,7 +22,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Root/>,
+        element: <Navbar/>,
         errorElement: <ErrorPage/>,
         children: [
             {

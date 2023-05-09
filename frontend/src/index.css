@@ -5,6 +5,13 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    background: url("../public/Watercolor.png");
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    list-style: none;
 }
 
 code {
@@ -12,6 +19,10 @@ code {
     monospace;
 }
 
+body a {
+  text-decoration: none;
+
+}
 
 .square {
     background: #fff;
@@ -43,6 +54,10 @@ code {
 
 #rps-choices li {
     display: inline-block;
+}
+
+#guides li {
+  list-style: none;
 }
 
 /* Adapted from https://www.w3schools.com/howto/howto_css_loader.asp */
