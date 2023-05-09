@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import "./game.css";
 
 function Game(props) {
     return (

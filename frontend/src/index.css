@@ -23,28 +23,6 @@ body a {
   text-decoration: none;
 }
 
-.square {
-    background: #fff;
-    border: 1px solid #999;
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 34px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 34px;
-}
-
-
-.board-row:after {
-    clear: both;
-    content: '';
-    display: table;
-}
-
 #rps-choices li {
     display: inline-block;
 }
@@ -52,6 +30,15 @@ body a {
 #guides li {
   list-style: none;
   margin: 2px 100px;
+}
+
+/* styling for the games page*/
+#games li {
+  border: 1px black solid;
+  width: fit-content;
+  list-style: none;
+  margin: 5px auto;
+  padding: 20px;
 }
 
 /* Adapted from https://www.w3schools.com/howto/howto_css_loader.asp */
