@@ -19,11 +19,18 @@ export default function Guessing() {
         let ignore = false;
 
         async function startFetching() {
-            const response = await fetch('http://localhost:3000/guess');
-            const data = await response.json();
-            console.log({data});
-            if (!ignore) {
-                setTarget(data.target);
+            const response = await fetch('http://localhost:4000/guess');
+            try {
+                const data = await response.json();
+                console.log({data});
+                if (!ignore) {
+                    setTarget(data.target);
+                }
+            } catch (error) {
+                console.log(error);
+                // fallback random number!
+                const number = Math.round((Math.random() * 100));
+                setTarget(number);
             }
         }
 
@@ -103,7 +110,7 @@ export default function Guessing() {
 
     return (
         <>
-            <div class = "container">
+            <div className = "container">
                 <div id = "guessing">
                     <h1>Guessing Game</h1>
                     <h3>Remaining Moves: {remainingMoves}</h3>
