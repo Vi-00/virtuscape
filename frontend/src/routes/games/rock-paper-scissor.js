@@ -53,7 +53,7 @@ export default function RockPaperScissor() {
                 choice: userChoice
             };
             try {
-                const response = await fetch('http://localhost:4000/rock-paper-scissor',
+                const response = await fetch('http://localhost:3000/rock-paper-scissor',
                     {
                         method: 'POST',
                         body: JSON.stringify(data),
