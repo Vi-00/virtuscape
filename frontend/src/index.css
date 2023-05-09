@@ -21,7 +21,6 @@ code {
 
 body a {
   text-decoration: none;
-
 }
 
 .square {
@@ -46,18 +45,13 @@ body a {
     display: table;
 }
 
-#games > li {
-    border: 1px black solid;
-    width: fit-content;
-    list-style: none;
-}
-
 #rps-choices li {
     display: inline-block;
 }
 
 #guides li {
   list-style: none;
+  margin: 2px 100px;
 }
 
 /* Adapted from https://www.w3schools.com/howto/howto_css_loader.asp */

@@ -1,0 +1,41 @@
+.game {
+  text-align: center;
+  height: 90vh;
+}
+
+/*the text at the top where displays player*/
+.status {
+  margin: 20px 0px;
+  font-size: 40px;
+}
+
+/*the entire 3 x 3 squares of buttons*/
+#board {
+  /*centers horizontally*/
+  width: 100px;
+  display: block;
+  margin: auto;
+}
+
+/*the buttons on the bottom of grid*/
+.game-info li {
+  list-style: none;
+  margin-right: 50px;
+}
+
+.game-info li button {
+  width: 150px;
+  padding: 5px;
+  margin: 7px;
+}
+
+/*gives more margin to the last button/list item*/
+.game-info:last-child {
+  margin-bottom: 50px;
+}
+
+@media screen and (max-height: 700px) {
+  body {
+    overflow-y: scroll;
+  }
+}

@@ -24,6 +24,9 @@ const instructions = [
 ];
 
 export default function Guides() {
+    //styles the overflow for this page only
+    document.body.style.overflowY = "scroll";
+    
     return (
         <div id="guides">
             <h1>A simple how-to guide</h1>

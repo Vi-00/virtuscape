@@ -34,6 +34,9 @@ const choiceId = {
 };
 
 export default function RockPaperScissor() {
+    //styles the overflow for this page only
+    document.body.style.overflow = "hidden";
+    
     const [userChoice, setUserChoice] = useState('');
     const [aiChoice, setAiChoice] = useState('');
     const [gameRound, setGameRound] = useState(0);
