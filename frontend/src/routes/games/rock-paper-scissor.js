@@ -36,7 +36,7 @@ const choiceId = {
 export default function RockPaperScissor() {
     //styles the overflow for this page only
     document.body.style.overflow = "hidden";
-    
+
     const [userChoice, setUserChoice] = useState('');
     const [aiChoice, setAiChoice] = useState('');
     const [gameRound, setGameRound] = useState(0);
@@ -49,7 +49,7 @@ export default function RockPaperScissor() {
             const data = {
                 choice: userChoice
             };
-            const response = await fetch('http://localhost:4000/rock-paper-scissor',
+            const response = await fetch('http://localhost:3000/rock-paper-scissor',
                 {
                     method: 'POST',
                     body: JSON.stringify(data),
