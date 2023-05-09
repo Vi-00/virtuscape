@@ -1,0 +1,34 @@
+.form {
+  width: 400px;
+  background-color: rgba(238,189,164, 0.5);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.form .input input {
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid rgb(146,107,84);
+  width: 200px;
+  height: 30px;
+}
+
+.form .submit input {
+  width: 205px;
+  height: 30px;
+  color: white;
+  background-color: #DB6C79;
+  border: none;
+  border-radius: 5px;
+}
+
+.form .submit input:hover {
+  background: #7A8B99;
+  color: rgb(241,214,194);
+  transition: all 0.2s ease-out;
+}

@@ -30,4 +30,5 @@
   color: white;
   border-color: white;
   border-style: dashed;
+  transition: all 0.2s ease-out;
 }
