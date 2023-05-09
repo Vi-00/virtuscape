@@ -18,12 +18,16 @@ There will be 10 questions. Every question will have 4 options with only one cor
 ## WebPage Outlook
 
 ### Index
+![Home Page of the Virtuscape React App](Home.png)
 
 ### Guides
+![Guide Page of the Virtuscape React App](Guide.png)
 
 ### Games
+![Games Page of the Virtuscape React App](Games.png)
 
 ### Tick Tac Toe
+![Tick Tac Toe Page of the Virtuscape React App](TickTacToe.png)
 
 ### Guessing
 
@@ -32,3 +36,6 @@ There will be 10 questions. Every question will have 4 options with only one cor
 ### Login
 
 ### Error
+![Error Page of the Virtuscape React App](Error.png)
+
+### Mobile NavBar
