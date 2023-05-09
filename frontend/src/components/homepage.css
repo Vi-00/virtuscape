@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 
+.container {
+    background: url("./images/Watercolor.png");
+    height: 100vh;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home {
+  overflow: hidden;
+}
+
 #comment {
   height: 95vh;
   display: flex;

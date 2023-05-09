@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import "./rock-paper-scissor.css";
 
 const ImageButton = (props) => (
     <button value={props.value} onClick={props.onClick}>
@@ -52,7 +53,7 @@ export default function RockPaperScissor() {
                 choice: userChoice
             };
             try {
-                const response = await fetch('http://localhost:4000/rock-paper-scissor',
+                const response = await fetch('http://localhost:3000/rock-paper-scissor',
                     {
                         method: 'POST',
                         body: JSON.stringify(data),
@@ -115,26 +116,31 @@ export default function RockPaperScissor() {
     }
     return (
         <>
-            <ul id={'rps-choices'}>
-                {buttonData.map(c => {
-                    const props = {
-                        onClick: () => {
-                            setUserChoice(c.value);
-                            setAiChoice('');
-                            setGameRound(gameRound + 1);
-                            setFetching(true);
-                        }, ...c
-                    };
-                    return <li key={c.key}>
-                        {ImageButton(props)}
-                    </li>
-                })}
-            </ul>
-            <p>You Chose:</p>
-            {renderUserChoice()}
-            <p>AI Chose: </p>
-            {renderAiChoice()}
-            <h2>{message}</h2>
+            <div class = "container" id = "rpscontainer">
+                <h1>Rock Paper Scissors</h1>
+                <ul id={'rps-choices'}>
+                    {buttonData.map(c => {
+                        const props = {
+                            onClick: () => {
+                                setUserChoice(c.value);
+                                setAiChoice('');
+                                setGameRound(gameRound + 1);
+                                setFetching(true);
+                            }, ...c
+                        };
+                        return <li key={c.key}>
+                            {ImageButton(props)}
+                        </li>
+                    })}
+                </ul>
+                <p>You Chose:</p>
+                {renderUserChoice()}
+                <p>AI Chose: </p>
+                    <div id = "ai">
+                        {renderAiChoice()}
+                    </div>
+                <h2>{message}</h2>
+            </div>
         </>
     )
 }

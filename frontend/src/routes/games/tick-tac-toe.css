@@ -1,6 +1,7 @@
-.game {
+#game {
   text-align: center;
-  height: 90vh;
+  height: 100vh;
+  border: 0.01px solid transparent;
 }
 
 /*the text at the top where displays player*/
