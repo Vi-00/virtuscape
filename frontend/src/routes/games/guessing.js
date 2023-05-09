@@ -4,6 +4,8 @@ import './guessing.css';
 const difference = Math.round((Math.random() * 10)) + 10;
 
 export default function Guessing() {
+    document.body.style.overflow = "hidden";
+
     /* chooses a randon number up to 100*/
     const number = Math.round((Math.random() * 100));
     const [remainingMoves, setRemainingMoves] = useState(5);

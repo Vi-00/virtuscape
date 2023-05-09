@@ -22,6 +22,7 @@ const games = [
 ]
 
 export default function Games() {
+    document.body.style.overflowY = "scroll";
     return (
         <ol id="games">
             {games.map(g => (
