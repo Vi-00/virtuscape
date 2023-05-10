@@ -32,3 +32,17 @@
   color: rgb(241,214,194);
   transition: all 0.2s ease-out;
 }
+
+.form button {
+  border: none;
+  background-color: transparent;
+  font-family: 'Courier New', monospace;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form button:hover {
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+}
