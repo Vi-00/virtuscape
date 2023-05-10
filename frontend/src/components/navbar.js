@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import './navbar.css';
+import './styles/navbar.css';
 
 function Navbar() {
   const [click, setClick] = useState(false);

@@ -5,19 +5,22 @@ const games = [
         key: 0,
         name: "Tic Tac Toe",
         location: "tic-tac-toe",
-        image: "tic-tac-toe.svg"
+        // source: https://dribbble.com/tags/tictactoe
+        image: "tic-tac-toe.png"
     },
     {
         key: 1,
         name: "Number Guessing",
         location: "guessing",
-        image: "guessing.svg"
+        // source: https://gifdb.com/gif/two-cute-animated-cats-question-mark-nwc23naz1c05cmvb.html
+        image: "guessing.gif"
     },
     {
         key: 2,
         name: "Rock Paper Scissor",
         location: "rock-paper-scissor",
-        image: "rps.webp"
+        // source: https://www.deviantart.com/naolito/art/Rock-Paper-Scissors-Bully-846437549
+        image: "rps.jpg"
     }
 ]
 
