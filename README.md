@@ -32,7 +32,11 @@ There will be 10 questions. Every question will have 4 options with only one cor
 ### Guessing
 ![Guessing Page of the Virtuscape React App](Guessing.png)
 
-### Trivia Game (TBD)
+### Rock Paper Scissors
+![Rock Paper Scissors Page of the Virtuscape React App](Rps.png)
+
+#### Rock Paper Scissors Error Handling
+![Rock Paper Scissors Error Page of the Virtuscape React App](RpsError.png)
 
 ### Login
 ![Login Page of the Virtuscape React App](Login.png)
